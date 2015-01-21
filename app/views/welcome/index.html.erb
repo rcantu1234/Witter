@@ -1,0 +1,10 @@
+<h3>Welcome To User</h3>
+<p>The wittiest place on the web</p>
+
+<ul>
+  <% @users.each do |user| %>
+  <li>
+    <%= link_to user.message, user_path(user) %> | <small> <%= time_ago_in_words(user.created_at) %> ago </small>
+  </li>
+  <% end %>
+</ul>
