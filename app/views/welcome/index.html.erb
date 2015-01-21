@@ -2,9 +2,10 @@
 <p>The wittiest place on the web</p>
 
 <ul>
-  <% @users.each do |user| %>
+  <% @wits.each do |wit| %>
   <li>
-    <%= link_to user.message, user_path(user) %> | <small> <%= time_ago_in_words(user.created_at) %> ago </small>
+    <%= link_to wit.message, wit_path(wit) %> | <small>
+    <%= time_ago_in_words(user.created_at) %> ago </small>
   </li>
   <% end %>
 </ul>
