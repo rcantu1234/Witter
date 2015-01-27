@@ -1,4 +1,4 @@
-class TodoItemsController < ApplicationController
+class NewWitsController < ApplicationController
   def index
     @new_wits = NewWit.all
   end
