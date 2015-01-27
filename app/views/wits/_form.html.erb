@@ -20,22 +20,3 @@
     <%= f.submit %>
   </div>
 <% end %>
-
-  <h1>Todos</h1>
-
-<% @wits.each do |wit| %>
-<p> <%= wit.message %> </p>
-<% end %>
-
-<%= form_for(@wit, remote: true) do |f| %>
-
-  <%= f.label :message %>
-  <%= f.text_field :message %>
-  <%= f.submit %>
-
-<% end %>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>

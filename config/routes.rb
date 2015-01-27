@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :new_wits
+
   resources :users
 
   resources :wits
