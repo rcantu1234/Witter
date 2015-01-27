@@ -1,21 +1,2 @@
-<%= form_for(@new_wit) do |f| %>
-  <% if @new_wit.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@new_wit.errors.count, "error") %> prohibited this new_wit from being saved:</h2>
-
-      <ul>
-      <% @new_wit.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :message %><br>
-    <%= f.text_field :message %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+<h1>TodoItems#create</h1>
+<p>Find me in app/views/todo_items/create.html.erb</p>
