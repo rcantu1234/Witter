@@ -1,11 +1,27 @@
+<div class="col-md-4">
 <h3>Welcome To Witter</h3>
 <p>The wittiest place on the web</p>
+</div>
+<!--
+<%= link_to "New Wit", new_wit_path %> |
+<%= link_to "New User", new_user_path %> -->
 
-<ul>
-  <% @wits.each do |wit| %>
-  <li>
-    <%= link_to wit.message, wit_path(wit) %> | <small>
-    <%= time_ago_in_words(wit.created_at) %> ago </small>
-  </li>
-  <% end %>
-</ul>
+
+<div class="col-md-8">
+  <ul>
+    <% @wits.each do |wit| %>
+    <li>
+      <%= link_to wit.message, wit_path(wit) %> | <small>
+      <%= time_ago_in_words(wit.created_at) %> ago </small>
+    </li>
+    <% end %>
+  </ul>
+</div>
+
+  <div class="row">
+        <footer>
+          <p>Made with hearts</p>
+        </footer>
+  </div>
+</div>
+

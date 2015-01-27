@@ -8,11 +8,30 @@
 </head>
 <body>
 
-<h1><%= link_to 'Witter', root_path %></h1>
+<div class="container">
 
-<%= link_to "New Wit", new_wit_path %>
+    <div class="row">
+      <header>
+        <h1><%= link_to 'Witter', root_path %></h1>
+        <%= link_to "New Wit", new_wit_path %> |
+        <%= link_to "New User", new_user_path %>
+      </header>
+    </div>
 
-<%= yield %>
+    <div class="row">
+      <div class="content">
+        <%= yield %>
+      </div>
+    </div>
+
+    <!--   <div class="row">
+        <footer>
+          <p>Made with hearts</p>
+        </footer>
+      </div>
+    </div> -->
+
+</div>
 
 </body>
 </html>

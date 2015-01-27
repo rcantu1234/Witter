@@ -5,3 +5,15 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+# country_list = [
+#   [ "Germany", 81831000 ],
+#   [ "France", 65447374 ],
+#   [ "Belgium", 10839905 ],
+#   [ "Netherlands", 16680000 ]
+# ]
+
+# country_list.each do |name, population|
+#   Country.create( name: name, population: population )
+# end
+
+puts "My name is Roel Cantu"
