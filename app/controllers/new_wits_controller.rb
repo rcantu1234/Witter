@@ -7,15 +7,15 @@ class NewWitsController < ApplicationController
   end
 
   def create
-    @new_wit = NewWit.new(wit_new_params)
+    @new_wit = NewWit.new(new_wits_params)
     if @new_wit.save
       respond_to do |format|
-        format.json { render json: @todo, status: :created, message: "Success" }
-        format.html { redirect_to todo_items_path, notice: 'Successfully Created!' }
+        format.json { render json: @new_wit, status: :created, message: "Success" }
+        format.html { redirect_to @new_wit, notice: 'Successfully Created!' }
       end
     else
       respond_to do |format|
-        format.json { render json: @todo.errors, staus: :created, message: "Success"}
+        format.json { render json: @new_wit.errors, staus: :created, message: "Success"}
         format.html { redirect_to :back, alert: 'Error Occured!' }
       end
     end
@@ -30,6 +30,6 @@ end
 
 private
 
-def todo_items_params
+def new_wits_params
   params.require(:new_wit).permit(:message)
 end
