@@ -1,14 +1,17 @@
-<h1>New Wits</h1>
-
-<% @new_wits.each do |new_wit| %>
-<p> <%= new_wit.message %> </p>
-<% end %>
+<h1>Todos</h1>
 
 <%= form_for(@new_wit, remote: true) do |f| %>
 
   <%= f.label :message %>
   <%= f.text_field :message %>
   <%= f.submit %>
+  </div>
 
+<% end %>
+
+<br>
+
+<% @new_wits.each do |new_wit| %>
+<p> <%= new_wit.message %> </p>
 <% end %>
 

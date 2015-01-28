@@ -1,2 +1,19 @@
-<h1>TodoItems#new</h1>
-<p>Find me in app/views/todo_items/new.html.erb</p>
+<h1>New Wits</h1>
+
+<%= form_for(@new_wit, remote: true) do |f| %>
+
+  <%= f.label :message %>
+  <%= f.text_field :message %>
+  <%= f.submit %>
+
+<% end %>
+
+<br>
+
+<% @new_wits.each do |new_wit| %>
+<p> <%= new_wit.message %> </p>
+<% end %>
+
+
+
+

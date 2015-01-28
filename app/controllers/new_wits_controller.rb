@@ -1,21 +1,24 @@
 class NewWitsController < ApplicationController
   def index
     @new_wits = NewWit.all
+    @new_wit = NewWit.new
   end
 
   def new
+    @new_wits = NewWit.all
+    @new_wit = NewWit.new
   end
 
   def create
-    @new_wit = NewWit.new(new_wits_params)
-    if @new_wit.save
+    @new = NewWit.new(new_wits_params)
+    if @new.save
       respond_to do |format|
-        format.json { render json: @new_wit, status: :created, message: "Success" }
-        format.html { redirect_to @new_wit, notice: 'Successfully Created!' }
+        format.json { render json: @new, status: :created, message: "Success" }
+        format.html { redirect_to @new, notice: 'Successfully Created!' }
       end
     else
       respond_to do |format|
-        format.json { render json: @new_wit.errors, staus: :created, message: "Success"}
+        format.json { render json: @new.errors, status: :created, message: "Success"}
         format.html { redirect_to :back, alert: 'Error Occured!' }
       end
     end
@@ -25,6 +28,11 @@ class NewWitsController < ApplicationController
   end
 
   def destroy
+     @wit.destroy
+    respond_to do |format|
+      format.html { redirect_to wits_url, notice: 'Wit was successfully destroyed.' }
+      format.json { head :no_content }
+    end
   end
 end
 

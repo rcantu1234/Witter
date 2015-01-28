@@ -6,7 +6,10 @@ Rails.application.routes.draw do
 
   resources :wits
 
-  root 'welcome#index'
+  #root 'welcome#index'
+
+
+  root 'new_wits#new'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
